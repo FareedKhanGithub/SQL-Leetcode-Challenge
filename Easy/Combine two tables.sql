@@ -21,14 +21,45 @@
 -- +-------------+---------+
 -- AddressId is the primary key column for this table.
  
+-- Write a SQL query for a report that provides the following information           
+           for each person in the Person table,
+           -- regardless if there is an address for each of those people:
 
--- Write a SQL query for a report that provides the following information for each person in the Person table,
--- regardless if there is an address for each of those people:
-
--- FirstName, LastName, City, State
-
+-- ((These are the contents for the FirstName, LastName, City, State
 
 -- Solution
 select FirstName, LastName, City, State
 from Person P left join Address A
 on P.PersonId = A.PersonId
+
+=======================================================================
+ https://leetcode.com/problems/combine-two-tables/
+
+So the end product will look like this 
+
+| FirstName | LastName | City          | State    |
+| --------- | -------- | ------------- | -------- |
+| Allen     | Wang     | null          | null     |
+| Bob       | Alice    | New York City | New York |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
